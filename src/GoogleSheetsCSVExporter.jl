@@ -1,6 +1,6 @@
 module GoogleSheetsCSVExporter
 
-using HTTP, CSV
+import HTTP
 
 struct Sheet
 	documentID
@@ -26,8 +26,8 @@ function openURI(uri::String)
 	end
 end
 
-function load(url::String)
-	HTTP.URI(url) |> parseURI |> exportURI |> openURI |> IOBuffer |> CSV.File
+function fromURI(uri::String)
+	HTTP.URI(uri) |> parseURI |> exportURI |> openURI |> IOBuffer
 end
 
 end # GoogleSheetsCSVExporter
