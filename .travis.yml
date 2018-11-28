@@ -2,3 +2,9 @@ language: julia
 sudo: false
 julia:
   - 0.7
+
+install:
+  julia -e "using Pkg; Pkg.build()"
+
+script:
+  julia -e "using Pkg; Pkg.test()"
