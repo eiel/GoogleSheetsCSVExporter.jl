@@ -1,4 +1,4 @@
-anguage: julia
+language: julia
 sudo: false
 julia:
   - 0.6
