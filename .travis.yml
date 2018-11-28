@@ -1,16 +1,4 @@
 anguage: julia
-
 sudo: false
-
-os:
-  - linux
-  - osx
-
 julia:
-  - 0.7
-  - 1.0
-  - nightly
-
-matrix:
-  allow_failures:
-  - julia: nightly
+  - 0.6
